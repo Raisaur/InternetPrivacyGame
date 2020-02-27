@@ -37,7 +37,7 @@ public class ProfileBase : MonoBehaviour
         points_ref.Add(VarRef.Topic.ElecGames, 0);
 
         points_ref.Add(VarRef.Topic.SportsFootball, 0);
-        points_ref.Add(VarRef.Topic.SportsSkate, 0);
+        points_ref.Add(VarRef.Topic.SportsSwimwear, 0);
         points_ref.Add(VarRef.Topic.SportsHike, 0);
 
         points_ref.Add(VarRef.Topic.FoodQuick , 0);
