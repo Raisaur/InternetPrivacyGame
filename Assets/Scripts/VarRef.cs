@@ -42,8 +42,10 @@ public class VarRef : MonoBehaviour
         SearchVacation,
         SearchIndoor,
         SearchBusiness,
-        SearchVehicle
+        SearchVehicle,
 
+        //No tag
+        blank
     }
 
     public enum Topic
