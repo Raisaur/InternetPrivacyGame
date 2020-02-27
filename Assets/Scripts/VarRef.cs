@@ -59,7 +59,7 @@ public class VarRef : MonoBehaviour
         ElecHouse,
 
         SportsFootball,
-        SportsSkate,
+        SportsSwimwear,
         SportsHike,
 
         FoodQuick,

@@ -49,7 +49,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.ClothesMen);
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.ElecGames);
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.SportsFootball);
-            tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.CarsBudget);
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.CarsHighend);
             tag_list[(int)VarRef.Tag.GenMan].tier3.Add(VarRef.Topic.CarsParts);
@@ -60,7 +60,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.ElecGames);
             tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.ElecPhone);
             tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.SportsFootball);
-            tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.FoodCafe);
             tag_list[(int)VarRef.Tag.AgeChild].tier3.Add(VarRef.Topic.ClothesCostume);
         }
@@ -89,7 +89,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.TravelCharter);
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.ElecPhone);
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.ElecHouse);
-            tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.FoodQuick);
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.FoodGourmet);
             tag_list[(int)VarRef.Tag.LiveCity].tier3.Add(VarRef.Topic.FoodCafe);
@@ -117,7 +117,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.ElecGames);
             tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.ClothesCostume);
             tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.SportsFootball);
-            tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.OccStudent].tier3.Add(VarRef.Topic.CarsBudget);
         }
 
@@ -147,7 +147,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.CarsBudget);
             tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.FoodCafe);
             tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.SportsFootball);
-            tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.FoodGourmet);
             tag_list[(int)VarRef.Tag.OccUnemployed].tier3.Add(VarRef.Topic.CarsParts);
         }
@@ -161,7 +161,7 @@ public class TagList : MonoBehaviour
 
             tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.TravelBudget);
             tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.ElecHouse);
-            tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.SportsSwimwear);
             tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.SportsFootball);
             tag_list[(int)VarRef.Tag.FamSingle].tier3.Add(VarRef.Topic.CarsParts);
         }
@@ -183,7 +183,7 @@ public class TagList : MonoBehaviour
             tag_list[(int)VarRef.Tag.FamHasKids].tier2.Add(VarRef.Topic.TravelCharter);
             tag_list[(int)VarRef.Tag.FamHasKids].tier2.Add(VarRef.Topic.FoodQuick);
             tag_list[(int)VarRef.Tag.FamHasKids].tier2.Add(VarRef.Topic.SportsFootball);
-            tag_list[(int)VarRef.Tag.FamHasKids].tier2.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.FamHasKids].tier2.Add(VarRef.Topic.SportsSwimwear);
 
             tag_list[(int)VarRef.Tag.FamHasKids].tier3.Add(VarRef.Topic.ClothesWomen);
             tag_list[(int)VarRef.Tag.FamHasKids].tier3.Add(VarRef.Topic.ClothesMen);
@@ -214,7 +214,7 @@ public class TagList : MonoBehaviour
 
         {
             tag_list[(int)VarRef.Tag.SearchOutdoor].tier1.Add(VarRef.Topic.SportsHike);
-            tag_list[(int)VarRef.Tag.SearchOutdoor].tier1.Add(VarRef.Topic.SportsSkate);
+            tag_list[(int)VarRef.Tag.SearchOutdoor].tier1.Add(VarRef.Topic.SportsSwimwear);
 
             tag_list[(int)VarRef.Tag.SearchOutdoor].tier2.Add(VarRef.Topic.SportsFootball);
             tag_list[(int)VarRef.Tag.SearchOutdoor].tier2.Add(VarRef.Topic.TravelBudget);

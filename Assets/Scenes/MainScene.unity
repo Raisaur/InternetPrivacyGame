@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 52023127}
   - component: {fileID: 52023126}
   m_Layer: 5
-  m_Name: sub3
+  m_Name: sub_btn_budget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 156741279}
   - component: {fileID: 156741278}
   m_Layer: 5
-  m_Name: B_Large1
+  m_Name: btn_travel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 421318273}
   - component: {fileID: 421318272}
   m_Layer: 5
-  m_Name: B_Large2_bg
+  m_Name: btn_electronics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3900,7 +3900,7 @@ GameObject:
   - component: {fileID: 939892585}
   - component: {fileID: 939892584}
   m_Layer: 5
-  m_Name: sub1
+  m_Name: sub_btn_cruise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5040,6 +5040,54 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1258512905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258512907}
+  - component: {fileID: 1258512906}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1258512906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258512905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8992fcc518c4c4b89e46adacdccf53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor_image: {fileID: 2800000, guid: 124a4518b5c19804a9bbc845d69894f4, type: 3}
+  currency_text: {fileID: 1969002913}
+  profile_list: []
+  upgrade_level: 0
+  points_multiplier: 100
+--- !u!4 &1258512907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258512905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.13339, y: 0.18945223, z: -0.3608949}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327936521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,7 +5101,7 @@ GameObject:
   - component: {fileID: 1327936524}
   - component: {fileID: 1327936523}
   m_Layer: 5
-  m_Name: sub2
+  m_Name: sub_btn_charter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
