@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void GiveAd()
+    public void CompareAds()
     {
         for (int i = 0; i < current_profile.GetNrOfTags(); i++)
         {

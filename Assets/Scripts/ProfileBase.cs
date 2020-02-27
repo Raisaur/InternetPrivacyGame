@@ -11,16 +11,40 @@ public class ProfileBase : MonoBehaviour
     [SerializeField]
     VarRef.Tag gender, age, location, occupation, family, financial, searched;
 
+    Dictionary<VarRef.Topic, int> points_ref;
+
     // Start is called before the first frame update
     void Start()
     {
+        points_ref.Add(VarRef.Topic.TravelCruise, 0);
+        points_ref.Add(VarRef.Topic.TravelCharter, 0);
+        points_ref.Add(VarRef.Topic.TravelBudget, 0);
         
+        points_ref.Add(VarRef.Topic.ElecPhone, 0);
+        points_ref.Add(VarRef.Topic.ElecHouse, 0);
+        points_ref.Add(VarRef.Topic.ElecGames, 0);
+
+        points_ref.Add(VarRef.Topic.SportsFootball, 0);
+        points_ref.Add(VarRef.Topic.SportsSkate, 0);
+        points_ref.Add(VarRef.Topic.SportsHike, 0);
+
+        points_ref.Add(VarRef.Topic.FoodQuick , 0);
+        points_ref.Add(VarRef.Topic.FoodGourmet, 0);
+        points_ref.Add(VarRef.Topic.FoodCafe, 0);
+
+        points_ref.Add(VarRef.Topic.CarsBudget, 0);
+        points_ref.Add(VarRef.Topic.CarsHighend, 0);
+        points_ref.Add(VarRef.Topic.CarsParts, 0);
+
+        points_ref.Add(VarRef.Topic.ClothesWomen, 0);
+        points_ref.Add(VarRef.Topic.ClothesMen, 0);
+        points_ref.Add(VarRef.Topic.ClothesCostume, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public int GetNrOfTags()
