@@ -12,7 +12,8 @@ public class ProfileBase : MonoBehaviour
     VarRef.Tag[] tag_array = new VarRef.Tag[nr_of_tags];
     TagBase[] tag_bases = new TagBase[nr_of_tags];
 
-    Dictionary<VarRef.Topic, int> points_ref;
+    [HideInInspector]
+    public Dictionary<VarRef.Topic, int> points_ref;
     TagList tags;
     int upgrade_level;
 
@@ -77,8 +78,6 @@ public class ProfileBase : MonoBehaviour
                 points_ref[tag_bases[i].tier3[l]] += 1;
             }
         }
-
-        
     }
 
     // Update is called once per frame
