@@ -5,15 +5,17 @@ using UnityEngine;
 public class ProfileBase : MonoBehaviour
 {
     public const int nr_of_tags = 7;
-    TagBase gender_tag, age_tag, location_tag, occupation_tag, family_tag, financial_tag, searched_tag;
     List<TagBase> profile_tags;
 
     [SerializeField]
     VarRef.Tag gender, age, location, occupation, family, financial, searched;
+    TagBase gender_tag, age_tag, location_tag, occupation_tag, family_tag, financial_tag, searched_tag;
 
     Dictionary<VarRef.Topic, int> points_ref;
+    int upgrade_level;
 
     // Start is called before the first frame update
+
     void Start()
     {
         points_ref.Add(VarRef.Topic.TravelCruise, 0);
@@ -39,6 +41,10 @@ public class ProfileBase : MonoBehaviour
         points_ref.Add(VarRef.Topic.ClothesWomen, 0);
         points_ref.Add(VarRef.Topic.ClothesMen, 0);
         points_ref.Add(VarRef.Topic.ClothesCostume, 0);
+
+        upgrade_level = GameObject.FindWithTag("GameController").GetComponent<GameManager>().upgrade_level;
+
+
     }
 
     // Update is called once per frame
