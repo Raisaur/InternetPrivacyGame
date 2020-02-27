@@ -7,9 +7,9 @@ public class ProfileBase : MonoBehaviour
     public const int nr_of_tags = 7;
     List<TagBase> profile_tags;
 
-    [SerializeField]
+    [HideInInspector]
     //Order: gender, age, location, occupation, family, financial, searched
-    VarRef.Tag[] tag_array = new VarRef.Tag[nr_of_tags];
+    public VarRef.Tag[] tag_array = new VarRef.Tag[nr_of_tags];
     TagBase[] tag_bases = new TagBase[nr_of_tags];
 
     [HideInInspector]
@@ -17,7 +17,14 @@ public class ProfileBase : MonoBehaviour
     TagList tags;
     int upgrade_level;
 
-    // Start is called before the first frame update
+    public ProfileBase(VarRef.Tag p_gen, VarRef.Tag p_age, VarRef.Tag p_loc,
+                VarRef.Tag p_occ, VarRef.Tag p_fam, VarRef.Tag p_fin, VarRef.Tag p_srch)
+    {
+        tag_array[0] = p_gen; tag_array[1] = p_gen;
+        tag_array[2] = p_gen; tag_array[3] = p_gen;
+        tag_array[4] = p_gen; tag_array[5] = p_gen;
+        tag_array[6] = p_gen;
+    }
 
     void Start()
     {
