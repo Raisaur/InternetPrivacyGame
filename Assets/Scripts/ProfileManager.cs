@@ -54,6 +54,9 @@ public class ProfileManager : MonoBehaviour
             }
             VarRef.Tag financial = RandTag(TagCategory.Financial);
             VarRef.Tag search = RandTag(TagCategory.Searched);
+            if (age == VarRef.Tag.AgeChild && search == VarRef.Tag.SearchBusiness) {
+                search = VarRef.Tag.SearchIndoor;
+            }
 
             NewProfile = new ProfileBase(gender, age, location, occupation, family, financial, search);
             profiles.Add(NewProfile);
@@ -162,9 +165,11 @@ public class ProfileManager : MonoBehaviour
                 text_fields[6].text = "Vacation and travel";
             else if (profile_tags[6] == VarRef.Tag.SearchIndoor)
                 text_fields[6].text = "Indoor activities";
+            else if (profile_tags[6] == VarRef.Tag.SearchBusiness)
+                text_fields[6].text = "Business meeting activities";
             else if (profile_tags[6] == VarRef.Tag.SearchVehicle)
                 text_fields[6].text = "Vehicles and machinery";
-            else Debug.Log("ProfileManager: Error in profile data - Searched");
+            else Debug.Log("ProfileManager: Error in profile data - Searched " + profile_tags[6]);
         }
 
     }

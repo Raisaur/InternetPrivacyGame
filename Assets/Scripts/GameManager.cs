@@ -62,8 +62,9 @@ public class GameManager : MonoBehaviour
         {
             awarded_points = current_profile.points_ref[ad_topic];
         }
+        float global_rand = Random.Range(0.95f, 1.05f);
 
-        int bonus = (awarded_points*awarded_points) * points_multiplier;
+        int bonus = (int)(((awarded_points*awarded_points) * points_multiplier) * global_rand);
         currency += bonus;
         currency_text.text = currency.ToString();
 
