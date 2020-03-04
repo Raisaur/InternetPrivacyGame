@@ -24,8 +24,8 @@ public class ProfileManager : MonoBehaviour
     Image profile_image;
 
     [SerializeField]
-    Sprite[] image_assets = new Sprite[6];
-    //Order: 0 child girl, 1 child boy, 2 adult female, 3 adult male, 4 elderly female, 5 elderly male
+    Sprite[] image_assets = new Sprite[7];
+    //Order: 0 child girl, 1 child boy, 2 adult female, 3 adult male, 4 elderly female, 5 elderly male, 6 blank
 
     [SerializeField]
     Text[] text_fields = new Text[7];
@@ -67,15 +67,15 @@ public class ProfileManager : MonoBehaviour
             text_fields[0].text = "Female";
 
             if (profile_tags[1] == VarRef.Tag.AgeChild) {
-                profile_image.sprite = image_assets[0];
+                profile_image.sprite = RandBlankImg(image_assets[0], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Child";
             }
             else if (profile_tags[1] == VarRef.Tag.AgeAdult) {
-                profile_image.sprite = image_assets[2];
+                profile_image.sprite = RandBlankImg(image_assets[2], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Adult";
             }
             else if (profile_tags[1] == VarRef.Tag.AgeElderly) {
-                profile_image.sprite = image_assets[4];
+                profile_image.sprite = RandBlankImg(image_assets[4], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Elderly";
             }
             else Debug.Log("ProfileManager: Error in profile data - Female Age");
@@ -85,15 +85,15 @@ public class ProfileManager : MonoBehaviour
             text_fields[0].text = "Male";
 
             if (profile_tags[1] == VarRef.Tag.AgeChild) {
-                profile_image.sprite = image_assets[1];
+                profile_image.sprite = RandBlankImg(image_assets[1], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Child";
             }
             else if (profile_tags[1] == VarRef.Tag.AgeAdult) {
-                profile_image.sprite = image_assets[3];
+                profile_image.sprite = RandBlankImg(image_assets[3], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Adult";
             }
             else if (profile_tags[1] == VarRef.Tag.AgeElderly) {
-                profile_image.sprite = image_assets[5];
+                profile_image.sprite = RandBlankImg(image_assets[5], profile_tags[1], profile_tags[2]);
                 text_fields[1].text = "Elderly";
             }
             else Debug.Log("ProfileManager: Error in profile data - Male Age");
@@ -198,6 +198,29 @@ public class ProfileManager : MonoBehaviour
         VarRef.Tag ret = (VarRef.Tag)rand;
 
         return ret;
+    }
+
+    Sprite RandBlankImg(Sprite actual_image, VarRef.Tag age, VarRef.Tag location)
+    {
+        int chance = 100;
+
+        if (age == VarRef.Tag.AgeChild)
+            chance -= 20;
+        else if (age == VarRef.Tag.AgeElderly)
+            chance -= 30;
+        else chance -= 10;
+
+        if (location == VarRef.Tag.LiveCountry)
+            chance -= 20;
+        else chance -= 10;
+
+        int rand = Random.Range(0, 100);
+
+        if (rand <= chance)
+        {
+            return actual_image;
+        }
+        else return image_assets[6];
     }
 
     public List<ProfileBase> GetProfiles() { return profiles; }
