@@ -86,7 +86,7 @@ public class ButtonManager : MonoBehaviour
         btn_clothes_men.onClick.AddListener(ClothesMenClick);
         btn_clothes_costume.onClick.AddListener(ClothesCostumeClick);
 
-        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gm = GetComponent<GameManager>();
     }
 
     // Update is called once per frame
