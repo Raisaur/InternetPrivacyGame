@@ -123,7 +123,7 @@ public class ButtonManager : MonoBehaviour
     //Upgrade buttons
     void Upgrade1Click()
     {
-        gm.Upgrade(upgrade_level);
+        //gm.Upgrade(upgrade_level);
 
         if (upgrade_level < upgrade_buttons.Length) ;
             upgrade_buttons[upgrade_level].gameObject.SetActive(false);
@@ -136,7 +136,7 @@ public class ButtonManager : MonoBehaviour
         if (!upgrade_1_done)
             return;
 
-        gm.Upgrade(upgrade_level);
+        //gm.Upgrade(upgrade_level);
 
         if (upgrade_level < upgrade_buttons.Length) ;
         upgrade_buttons[upgrade_level].gameObject.SetActive(false);

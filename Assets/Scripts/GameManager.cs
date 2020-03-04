@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     Texture2D cursor_image;
     [SerializeField]
     Text currency_text;
-    [SerializeField]
-    Image[] hide_images;
+    //[SerializeField]
+    //Image[] hide_images;
 
     public List<ProfileBase> profile_list;
     ProfileBase current_profile;
@@ -58,9 +58,9 @@ public class GameManager : MonoBehaviour
         current_profile = profile_list[current_profile_index];
     }
 
-    public void Upgrade(int upgradelevel)
-    {
-        if (upgradelevel < hide_images.Length)
-            hide_images[upgradelevel].gameObject.SetActive(false);
-    }
+    //public void Upgrade(int upgradelevel)
+    //{
+    //    if (upgradelevel < hide_images.Length)
+    //        hide_images[upgradelevel].gameObject.SetActive(false);
+    //}
 }
