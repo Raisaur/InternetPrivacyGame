@@ -51,7 +51,7 @@ public class ButtonManager : MonoBehaviour
 
             food_buttons[0] = btn_food_quick;
             food_buttons[1] = btn_food_gourmet;
-            food_buttons[2] = btn_food_gourmet;
+            food_buttons[2] = btn_food_cafe;
 
             cars_buttons[0] = btn_cars_budget;
             cars_buttons[1] = btn_cars_highend;
@@ -63,6 +63,28 @@ public class ButtonManager : MonoBehaviour
         }
 
         btn_travel_cruise.onClick.AddListener(TravelCruiseClick);
+        btn_travel_charter.onClick.AddListener(TravelCharterClick);
+        btn_travel_budget.onClick.AddListener(TravelBudgetClick);
+
+        btn_electronics_phone.onClick.AddListener(ElectronicsPhonesClick);
+        btn_electronics_games.onClick.AddListener(ElectronicGamesClick);
+        btn_electronics_house.onClick.AddListener(ElectronicHouseClick);
+
+        btn_sports_football.onClick.AddListener(SportsFootballClick);
+        btn_sports_swimwear.onClick.AddListener(SportsSwimwearClick);
+        btn_sports_hiking.onClick.AddListener(SportsHikeClick);
+
+        btn_food_quick.onClick.AddListener(FoodQuickClick);
+        btn_food_gourmet.onClick.AddListener(FoodGourmetClick);
+        btn_food_cafe.onClick.AddListener(FoodCafeClick);
+
+        btn_cars_budget.onClick.AddListener(CarsBudgetClick);
+        btn_cars_highend.onClick.AddListener(CarsHighendClick);
+        btn_cars_parts.onClick.AddListener(CarsPartsClick);
+
+        btn_clothes_women.onClick.AddListener(ClothesWomenClick);
+        btn_clothes_men.onClick.AddListener(ClothesMenClick);
+        btn_clothes_costume.onClick.AddListener(ClothesCostumeClick);
 
         gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
