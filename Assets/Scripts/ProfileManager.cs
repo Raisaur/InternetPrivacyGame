@@ -177,25 +177,25 @@ public class ProfileManager : MonoBehaviour
         switch (category)
         {
             case TagCategory.Gender:
-                min = 0; max = 1;
+                min = 0; max = 2;
                 break;
             case TagCategory.Age:
-                min = 2; max = 4;
+                min = 2; max = 5;
                 break;
             case TagCategory.Location:
-                min = 5; max = 6;
+                min = 5; max = 7;
                 break;
             case TagCategory.Occupation:
-                min = 7; max = 9;
+                min = 7; max = 10;
                 break;
             case TagCategory.Family:
-                min = 10; max = 12;
+                min = 10; max = 13;
                 break;
             case TagCategory.Financial:
-                min = 13; max = 15;
+                min = 13; max = 16;
                 break;
             case TagCategory.Searched:
-                min = 16; max = 23;
+                min = 16; max = 24;
                 break;
             default:
                 break;
