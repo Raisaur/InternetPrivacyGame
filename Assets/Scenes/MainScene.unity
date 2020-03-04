@@ -5050,6 +5050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1258512907}
   - component: {fileID: 1258512906}
+  - component: {fileID: 1258512910}
   - component: {fileID: 1258512908}
   - component: {fileID: 1258512909}
   m_Layer: 0
@@ -5073,7 +5074,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor_image: {fileID: 2800000, guid: 124a4518b5c19804a9bbc845d69894f4, type: 3}
   currency_text: {fileID: 1969002913}
-  profile_list: []
   upgrade_level: 0
   points_multiplier: 100
 --- !u!4 &1258512907
@@ -5084,7 +5084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258512905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13339, y: 0.18945223, z: -0.3608949}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5142,6 +5142,34 @@ MonoBehaviour:
   tier1: 
   tier2: 
   tier3: 
+--- !u!114 &1258512910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258512905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be782b91a54aab74c9cd6c5cd05f1daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile_image: {fileID: 1345857748}
+  image_assets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 099c1b1c6fbe5bd43909e6e755aefe34, type: 3}
+  - {fileID: 21300000, guid: 485cf09274d3560468144b4feb9d0421, type: 3}
+  - {fileID: 21300000, guid: 1fbc120df845e044abc8f92e983d126a, type: 3}
+  - {fileID: 21300000, guid: 10807e69ea14919499b6a2b3bd48cf25, type: 3}
+  text_fields:
+  - {fileID: 780951531}
+  - {fileID: 1911729250}
+  - {fileID: 808116687}
+  - {fileID: 571439746}
+  - {fileID: 733186092}
+  - {fileID: 1792821152}
+  - {fileID: 1839110402}
 --- !u!1 &1327936521
 GameObject:
   m_ObjectHideFlags: 0
