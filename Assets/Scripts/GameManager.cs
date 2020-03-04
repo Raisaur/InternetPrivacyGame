@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     Texture2D cursor_image;
     [SerializeField]
     Text currency_text;
+    [SerializeField]
+    Text currency_add_text;
 
     [SerializeField]
     int[] upgrade_costs;
