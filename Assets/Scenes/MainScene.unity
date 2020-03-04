@@ -5073,6 +5073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor_image: {fileID: 2800000, guid: 124a4518b5c19804a9bbc845d69894f4, type: 3}
   currency_text: {fileID: 1969002913}
+  upgrade_costs: 8813000010270000
   points_multiplier: 100
 --- !u!4 &1258512907
 Transform:

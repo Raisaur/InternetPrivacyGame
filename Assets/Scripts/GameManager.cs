@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         currency_text.text = currency.ToString();
 
         LoadNextProfile();
+        gameObject.GetComponent<ProfileManager>().DisplayProfile(current_profile);
     }
 
     void LoadNextProfile()

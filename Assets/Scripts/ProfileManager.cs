@@ -60,7 +60,7 @@ public class ProfileManager : MonoBehaviour
         }
     }
 
-    void DisplayProfile(ProfileBase profile)
+    public void DisplayProfile(ProfileBase profile)
     {
         VarRef.Tag[] profile_tags = profile.GetTagArray();
 
