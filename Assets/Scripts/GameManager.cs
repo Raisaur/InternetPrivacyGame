@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     int[] upgrade_costs;
+    int upgrade_level;
     
 
     public List<ProfileBase> profile_list;
@@ -90,5 +91,7 @@ public class GameManager : MonoBehaviour
     }
 
     public int GetUpgradeCost(int upgradeNumber) { return upgrade_costs[upgradeNumber]; }
+
+    public void SetUpgradeLevel(int upgradeLevel) { upgrade_level = upgradeLevel; }
 
 }
