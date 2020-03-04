@@ -123,25 +123,35 @@ public class ButtonManager : MonoBehaviour
     //Upgrade buttons
     void Upgrade1Click()
     {
-        //gm.Upgrade(upgrade_level);
+        if (gm.GetCurrency() >= gm.GetUpgradeCost(upgrade_level))
+        {
+            if (upgrade_level < upgrade_buttons.Length)
+            {
+                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
-        if (upgrade_level < upgrade_buttons.Length) ;
-            upgrade_buttons[upgrade_level].gameObject.SetActive(false);
-
-        upgrade_level++;
-        upgrade_1_done = true;
+                upgrade_level++;
+                upgrade_1_done = true;
+            }
+        }
     }
+
     void Upgrade2Click()
     {
         if (!upgrade_1_done)
             return;
 
-        //gm.Upgrade(upgrade_level);
+        if (gm.GetCurrency() >= gm.GetUpgradeCost(upgrade_level))
+        {
+            if (upgrade_level < upgrade_buttons.Length)
+            {
+                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
-        if (upgrade_level < upgrade_buttons.Length) ;
-        upgrade_buttons[upgrade_level].gameObject.SetActive(false);
-
-        upgrade_level++;
+                upgrade_level++;
+                upgrade_1_done = true;
+            }
+        }
     }
 
     //Travel buttons

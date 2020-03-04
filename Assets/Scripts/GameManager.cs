@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     Texture2D cursor_image;
     [SerializeField]
     Text currency_text;
-    //[SerializeField]
-    //Image[] hide_images;
+
+    [SerializeField]
+    int[] upgrade_costs;
+    
 
     public List<ProfileBase> profile_list;
     ProfileBase current_profile;
@@ -58,9 +60,14 @@ public class GameManager : MonoBehaviour
         current_profile = profile_list[current_profile_index];
     }
 
-    //public void Upgrade(int upgradelevel)
-    //{
-    //    if (upgradelevel < hide_images.Length)
-    //        hide_images[upgradelevel].gameObject.SetActive(false);
-    //}
+    public int GetCurrency() { return currency; }
+
+    public void SubtractCurrency (int sub) 
+    {
+        currency -= sub;
+        currency_text.text = currency.ToString();
+    }
+
+    public int GetUpgradeCost(int upgradeNumber) { return upgrade_costs[upgradeNumber]; }
+
 }
