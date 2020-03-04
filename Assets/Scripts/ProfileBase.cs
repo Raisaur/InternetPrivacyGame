@@ -98,4 +98,9 @@ public class ProfileBase
     {
         return profile_tags[index];
     }
+
+    public VarRef.Tag[] GetTagArray()
+    {
+        return tag_array;
+    }
 }
