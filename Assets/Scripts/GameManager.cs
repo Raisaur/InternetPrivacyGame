@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     Text currency_text;
     [SerializeField]
     Text currency_add_text;
+    float add_timer = 0.0f;
 
     [SerializeField]
     int[] upgrade_costs;
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
         current_profile = profile_list[0];
         current_profile_index = 0;
         gameObject.GetComponent<ProfileManager>().DisplayProfile(current_profile);
+        currency_add_text.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +48,11 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
             sm.PlayClickSound();
+
+        if (add_timer > 0)
+            add_timer -= Time.deltaTime;
+        if (add_timer < 0)
+            currency_add_text.gameObject.SetActive(false);
     }
 
     public void GiveAd(VarRef.Topic ad_topic)
@@ -56,8 +63,13 @@ public class GameManager : MonoBehaviour
             awarded_points = current_profile.points_ref[ad_topic];
         }
 
-        currency += awarded_points * points_multiplier;
+        int bonus = (awarded_points*awarded_points) * points_multiplier;
+        currency += bonus;
         currency_text.text = currency.ToString();
+
+        currency_add_text.text = "+" + bonus;
+        currency_add_text.gameObject.SetActive(true);
+        add_timer = 1.3f;
 
         LoadNextProfile();
         gameObject.GetComponent<ProfileManager>().DisplayProfile(current_profile);
