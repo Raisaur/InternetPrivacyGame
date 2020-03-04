@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
 
         currency += awarded_points * points_multiplier;
         currency_text.text = currency.ToString();
+
+        LoadNextProfile();
     }
 
     void LoadNextProfile()

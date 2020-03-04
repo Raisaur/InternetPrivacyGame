@@ -12,6 +12,9 @@ public class ButtonManager : MonoBehaviour
     Button[] cars_buttons;
     Button[] clothes_buttons;
 
+    Button[] upgrade_buttons;
+    Image[] hide_images;
+
     [SerializeField]
     Button btn_travel, btn_electronics, btn_sports,
            btn_food, btn_cars, btn_clothes;
@@ -24,6 +27,11 @@ public class ButtonManager : MonoBehaviour
            btn_cars_budget, btn_cars_highend, btn_cars_parts,
            btn_clothes_women, btn_clothes_men, btn_clothes_costume;
 
+    [SerializeField]
+    Button btn_upgrade1, btn_upgrade_2;
+    [SerializeField]
+    Image img_hide1, img_hide2;
+
     GameManager gm;
 
     // Start is called before the first frame update
@@ -35,6 +43,9 @@ public class ButtonManager : MonoBehaviour
         food_buttons = new Button[3];
         cars_buttons = new Button[3];
         clothes_buttons = new Button[3];
+
+        upgrade_buttons = new Button[2];
+        hide_images = new Image[2];
         // add buttons to respective arrays
         { 
             travel_buttons[0] = btn_travel_cruise;
@@ -60,6 +71,8 @@ public class ButtonManager : MonoBehaviour
             clothes_buttons[0] = btn_clothes_women;
             clothes_buttons[1] = btn_clothes_men;
             clothes_buttons[2] = btn_clothes_costume;
+
+            
         }
 
         btn_travel_cruise.onClick.AddListener(TravelCruiseClick);
@@ -101,6 +114,12 @@ public class ButtonManager : MonoBehaviour
         //{
         //    buttons[i].gameObject.SetActive(onoff);
         //}
+    }
+
+    //Upgrade buttons
+    void UpgradeClick()
+    {
+        
     }
 
     //Travel buttons
