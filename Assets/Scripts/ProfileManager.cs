@@ -72,4 +72,6 @@ public class ProfileManager : MonoBehaviour
 
         return ret;
     }
+
+    public List<ProfileBase> GetProfiles() { return profiles; }
 }
