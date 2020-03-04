@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class ButtonManager : MonoBehaviour
     Image data_block_1, data_block_2;
 
     GameManager gm;
+    SoundManager sm;
 
     // Start is called before the first frame update
     void Start()
@@ -77,6 +79,8 @@ public class ButtonManager : MonoBehaviour
             upgrade_buttons[0] = btn_upgrade1;
             upgrade_buttons[1] = btn_upgrade_2;
         }
+
+        sm = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
 
         btn_travel_cruise.onClick.AddListener(TravelCruiseClick);
         btn_travel_charter.onClick.AddListener(TravelCharterClick);
@@ -134,6 +138,7 @@ public class ButtonManager : MonoBehaviour
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;
+                gm.SetUpgradeLevel(upgrade_level);
                 upgrade_1_done = true;
             }
         }
@@ -153,6 +158,7 @@ public class ButtonManager : MonoBehaviour
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;
+                gm.SetUpgradeLevel(upgrade_level);
                 upgrade_1_done = true;
             }
         }
