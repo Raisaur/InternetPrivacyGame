@@ -15,7 +15,6 @@ public class ProfileBase
     [HideInInspector]
     public Dictionary<VarRef.Topic, int> points_ref;
     TagList tags;
-    int upgrade_level;
 
     public ProfileBase(VarRef.Tag p_gen, VarRef.Tag p_age, VarRef.Tag p_loc,
                 VarRef.Tag p_occ, VarRef.Tag p_fam, VarRef.Tag p_fin, VarRef.Tag p_srch)
@@ -54,8 +53,6 @@ public class ProfileBase
         points_ref.Add(VarRef.Topic.ClothesWomen, 0);
         points_ref.Add(VarRef.Topic.ClothesMen, 0);
         points_ref.Add(VarRef.Topic.ClothesCostume, 0);
-
-        upgrade_level = GameObject.FindWithTag("GameController").GetComponent<GameManager>().upgrade_level;
 
         for (int i = 0; i < (int)VarRef.Tag.blank; i++){
             for (int j = 0; j < nr_of_tags; j++)
