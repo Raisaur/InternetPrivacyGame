@@ -5073,7 +5073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor_image: {fileID: 2800000, guid: 124a4518b5c19804a9bbc845d69894f4, type: 3}
   currency_text: {fileID: 1969002913}
-  upgrade_level: 0
+  hide_images:
+  - {fileID: 872480307}
+  - {fileID: 1935937078}
   points_multiplier: 100
 --- !u!4 &1258512907
 Transform:
@@ -5125,6 +5127,8 @@ MonoBehaviour:
   btn_clothes_women: {fileID: 1107037493}
   btn_clothes_men: {fileID: 2061463686}
   btn_clothes_costume: {fileID: 291217341}
+  btn_upgrade1: {fileID: 1414172232}
+  btn_upgrade_2: {fileID: 906895607}
 --- !u!114 &1258512910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5137,6 +5141,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be782b91a54aab74c9cd6c5cd05f1daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  profile_image: {fileID: 0}
+  image_assets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  text_fields:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1327936521
 GameObject:
   m_ObjectHideFlags: 0

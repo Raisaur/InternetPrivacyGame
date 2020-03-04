@@ -13,7 +13,8 @@ public class ButtonManager : MonoBehaviour
     Button[] clothes_buttons;
 
     Button[] upgrade_buttons;
-    Image[] hide_images;
+    int upgrade_level;
+    bool upgrade_1_done = false;
 
     [SerializeField]
     Button btn_travel, btn_electronics, btn_sports,
@@ -29,8 +30,6 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField]
     Button btn_upgrade1, btn_upgrade_2;
-    [SerializeField]
-    Image img_hide1, img_hide2;
 
     GameManager gm;
 
@@ -45,7 +44,8 @@ public class ButtonManager : MonoBehaviour
         clothes_buttons = new Button[3];
 
         upgrade_buttons = new Button[2];
-        hide_images = new Image[2];
+        upgrade_level = 0;
+
         // add buttons to respective arrays
         { 
             travel_buttons[0] = btn_travel_cruise;
@@ -72,7 +72,8 @@ public class ButtonManager : MonoBehaviour
             clothes_buttons[1] = btn_clothes_men;
             clothes_buttons[2] = btn_clothes_costume;
 
-            
+            upgrade_buttons[0] = btn_upgrade1;
+            upgrade_buttons[1] = btn_upgrade_2;
         }
 
         btn_travel_cruise.onClick.AddListener(TravelCruiseClick);
@@ -99,6 +100,9 @@ public class ButtonManager : MonoBehaviour
         btn_clothes_men.onClick.AddListener(ClothesMenClick);
         btn_clothes_costume.onClick.AddListener(ClothesCostumeClick);
 
+        btn_upgrade1.onClick.AddListener(Upgrade1Click);
+        btn_upgrade_2.onClick.AddListener(Upgrade2Click);
+
         gm = GetComponent<GameManager>();
     }
 
@@ -117,9 +121,27 @@ public class ButtonManager : MonoBehaviour
     }
 
     //Upgrade buttons
-    void UpgradeClick()
+    void Upgrade1Click()
     {
-        
+        gm.Upgrade(upgrade_level);
+
+        if (upgrade_level < upgrade_buttons.Length) ;
+            upgrade_buttons[upgrade_level].gameObject.SetActive(false);
+
+        upgrade_level++;
+        upgrade_1_done = true;
+    }
+    void Upgrade2Click()
+    {
+        if (!upgrade_1_done)
+            return;
+
+        gm.Upgrade(upgrade_level);
+
+        if (upgrade_level < upgrade_buttons.Length) ;
+        upgrade_buttons[upgrade_level].gameObject.SetActive(false);
+
+        upgrade_level++;
     }
 
     //Travel buttons

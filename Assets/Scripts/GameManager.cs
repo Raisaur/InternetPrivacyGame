@@ -9,12 +9,13 @@ public class GameManager : MonoBehaviour
     Texture2D cursor_image;
     [SerializeField]
     Text currency_text;
+    [SerializeField]
+    Image[] hide_images;
 
     public List<ProfileBase> profile_list;
     ProfileBase current_profile;
     int current_profile_index;
 
-    public int upgrade_level;
     int currency = 0;
     [SerializeField]
     int points_multiplier;
@@ -29,7 +30,6 @@ public class GameManager : MonoBehaviour
 
         current_profile = profile_list[0];
         current_profile_index = 0;
-        upgrade_level = 0;
     }
 
     // Update is called once per frame
@@ -58,13 +58,9 @@ public class GameManager : MonoBehaviour
         current_profile = profile_list[current_profile_index];
     }
 
-    void Upgrade()
+    public void Upgrade(int upgradelevel)
     {
-        if (upgrade_level == 0)
-            upgrade_level = 1;
-        else if (upgrade_level == 1)
-            upgrade_level = 2;
-        else
-            return;
+        if (upgradelevel < hide_images.Length)
+            hide_images[upgradelevel].gameObject.SetActive(false);
     }
 }
