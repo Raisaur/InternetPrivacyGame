@@ -30,6 +30,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField]
     Button btn_upgrade1, btn_upgrade_2;
+    [SerializeField]
+    Image data_block_1, data_block_2;
 
     GameManager gm;
 
@@ -127,7 +129,8 @@ public class ButtonManager : MonoBehaviour
         {
             if (upgrade_level < upgrade_buttons.Length)
             {
-               // gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                // gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                data_block_1.gameObject.SetActive(false);
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;
@@ -146,6 +149,7 @@ public class ButtonManager : MonoBehaviour
             if (upgrade_level < upgrade_buttons.Length)
             {
                 //gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                data_block_2.gameObject.SetActive(false);
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;

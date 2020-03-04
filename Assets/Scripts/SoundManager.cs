@@ -15,16 +15,17 @@ public class SoundManager : MonoBehaviour
         AudioSource[] audio_sources = GetComponents<AudioSource>();
         audio_source_0 = audio_sources[0];
         audio_source_1 = audio_sources[1];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audio_source_2 = audio_sources[2];
+        audio_source_3 = audio_sources[3];
     }
 
     public void PlayClickSound()
     {
+        audio_source_0.Play();
+    }
 
+    public void PlayHoverButton()
+    {
+        audio_source_1.Play();
     }
 }

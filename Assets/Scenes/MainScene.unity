@@ -5488,6 +5488,8 @@ MonoBehaviour:
   btn_clothes_costume: {fileID: 291217341}
   btn_upgrade1: {fileID: 1414172232}
   btn_upgrade_2: {fileID: 906895607}
+  data_block_1: {fileID: 872480307}
+  data_block_2: {fileID: 1935937078}
 --- !u!114 &1258512909
 MonoBehaviour:
   m_ObjectHideFlags: 0
