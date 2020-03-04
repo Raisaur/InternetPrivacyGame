@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         Vector2Int pointer_offset = new Vector2Int(12, 3);
         Cursor.SetCursor(cursor_image, pointer_offset, CursorMode.ForceSoftware);
 
-        profile_list = GetComponent<ProfileManager>().GetProfiles();
+        profile_list = gameObject.GetComponent<ProfileManager>().GetProfiles();
 
         current_profile = profile_list[0];
         current_profile_index = 0;

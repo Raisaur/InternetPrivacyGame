@@ -5050,7 +5050,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1258512907}
   - component: {fileID: 1258512906}
-  - component: {fileID: 1258512910}
   - component: {fileID: 1258512908}
   - component: {fileID: 1258512909}
   m_Layer: 0
@@ -5126,23 +5125,11 @@ MonoBehaviour:
   btn_clothes_women: {fileID: 1107037493}
   btn_clothes_men: {fileID: 2061463686}
   btn_clothes_costume: {fileID: 291217341}
+  btn_upgrade1: {fileID: 0}
+  btn_upgrade_2: {fileID: 0}
+  img_hide1: {fileID: 0}
+  img_hide2: {fileID: 0}
 --- !u!114 &1258512909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1258512905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9395d4c8e747ee47b711cdec5cb22b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  this_tag: 0
-  tier1: 
-  tier2: 
-  tier3: 
---- !u!114 &1258512910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

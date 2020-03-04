@@ -31,7 +31,7 @@ public class ProfileManager : MonoBehaviour
     Text[] text_fields = new Text[7];
     //Order: 0 gender, 1 age, 2 location, 3 occupation, 4 family, 5 financial, 6 searched
     
-    void Start()
+    void Awake()
     {
         profiles = new List<ProfileBase>();
 
