@@ -24,6 +24,9 @@ public class ProfileManager : MonoBehaviour
     Image profile_image;
 
     [SerializeField]
+    Text user_number;
+
+    [SerializeField]
     Sprite[] image_assets = new Sprite[7];
     //Order: 0 child girl, 1 child boy, 2 adult female, 3 adult male, 4 elderly female, 5 elderly male, 6 blank
 
@@ -60,6 +63,9 @@ public class ProfileManager : MonoBehaviour
     void DisplayProfile(ProfileBase profile)
     {
         VarRef.Tag[] profile_tags = profile.GetTagArray();
+
+        int rand_user_nr = Random.Range(10000, 99999);
+        user_number.text = "User #" + rand_user_nr;
 
         //Determine profile image, gender text and age text
         if (profile_tags[0] == VarRef.Tag.GenWoman)
