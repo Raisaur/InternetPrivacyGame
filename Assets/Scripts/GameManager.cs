@@ -63,8 +63,15 @@ public class GameManager : MonoBehaviour
         {
             awarded_points = current_profile.points_ref[ad_topic];
         }
+        float global_rand = Random.Range(0.95f, 1.05f);
+        float upgrade_bonus = 1.0f;
+        if (upgrade_level == 1)
+            upgrade_bonus = 1.2f;
+        else if (upgrade_level == 2)
+            upgrade_bonus = 1.4f;
 
-        int bonus = (awarded_points*awarded_points) * points_multiplier;
+        int bonus = (int)((((awarded_points*awarded_points) * points_multiplier) * upgrade_bonus) * global_rand);
+
 
         if (bonus > 500)
             sm.PlayLotsOfMoneySound();
