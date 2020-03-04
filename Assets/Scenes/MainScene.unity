@@ -1564,68 +1564,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421318270}
   m_CullTransparentMesh: 0
---- !u!1 &443499212
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 443499215}
-  - component: {fileID: 443499214}
-  - component: {fileID: 443499213}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: GameController
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &443499213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443499212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9395d4c8e747ee47b711cdec5cb22b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  this_tag: 0
-  tier1: 
-  tier2: 
-  tier3: 
---- !u!114 &443499214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443499212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8992fcc518c4c4b89e46adacdccf53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile_list: []
-  upgrade_level: 0
---- !u!4 &443499215
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443499212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462179671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5113,6 +5051,7 @@ GameObject:
   - component: {fileID: 1258512907}
   - component: {fileID: 1258512906}
   - component: {fileID: 1258512908}
+  - component: {fileID: 1258512909}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5163,24 +5102,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5a9313fa5e124498a25a6615a334a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn_travel_cruise: {fileID: 0}
-  btn_travel_charter: {fileID: 0}
-  btn_travel_budget: {fileID: 0}
-  btn_electronics_phone: {fileID: 0}
-  btn_electronics_games: {fileID: 0}
-  btn_electronics_house: {fileID: 0}
-  btn_sports_football: {fileID: 0}
-  btn_sports_swimwear: {fileID: 0}
-  btn_sports_hiking: {fileID: 0}
-  btn_food_quick: {fileID: 0}
-  btn_food_gourmet: {fileID: 0}
-  btn_food_cafe: {fileID: 0}
-  btn_cars_budget: {fileID: 0}
-  btn_cars_highend: {fileID: 0}
-  btn_cars_parts: {fileID: 0}
-  btn_clothes_women: {fileID: 0}
-  btn_clothes_men: {fileID: 0}
-  btn_clothes_costume: {fileID: 0}
+  btn_travel: {fileID: 156741278}
+  btn_electronics: {fileID: 814260885}
+  btn_sports: {fileID: 591834938}
+  btn_food: {fileID: 1490768625}
+  btn_cars: {fileID: 638191799}
+  btn_clothes: {fileID: 328970418}
+  btn_travel_cruise: {fileID: 939892584}
+  btn_travel_charter: {fileID: 1327936523}
+  btn_travel_budget: {fileID: 52023126}
+  btn_electronics_phone: {fileID: 1733097069}
+  btn_electronics_games: {fileID: 1191124930}
+  btn_electronics_house: {fileID: 1573158478}
+  btn_sports_football: {fileID: 1590985545}
+  btn_sports_swimwear: {fileID: 1033001729}
+  btn_sports_hiking: {fileID: 489475258}
+  btn_food_quick: {fileID: 2028852082}
+  btn_food_gourmet: {fileID: 248731615}
+  btn_food_cafe: {fileID: 790344794}
+  btn_cars_budget: {fileID: 926944959}
+  btn_cars_highend: {fileID: 850807876}
+  btn_cars_parts: {fileID: 634297840}
+  btn_clothes_women: {fileID: 1107037493}
+  btn_clothes_men: {fileID: 2061463686}
+  btn_clothes_costume: {fileID: 291217341}
+--- !u!114 &1258512909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258512905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9395d4c8e747ee47b711cdec5cb22b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_tag: 0
+  tier1: 
+  tier2: 
+  tier3: 
 --- !u!1 &1327936521
 GameObject:
   m_ObjectHideFlags: 0
