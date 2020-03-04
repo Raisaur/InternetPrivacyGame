@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class TagBase : MonoBehaviour
+public class TagBase 
 {
-    [HideInInspector]
     public VarRef.Tag this_tag;
 
-    [HideInInspector]
     public List<VarRef.Topic> tier1;
-    [HideInInspector]
     public List<VarRef.Topic> tier2;
-    [HideInInspector]
     public List<VarRef.Topic> tier3;
 
-    void Start()
+    public TagBase()
     {
-        
+        tier1 = new List<VarRef.Topic>();
+        tier2 = new List<VarRef.Topic>();
+        tier3 = new List<VarRef.Topic>();
     }
 }
 
-public class TagList : MonoBehaviour
+public class TagList 
 {
     public List<TagBase> tag_list;
 
-    void Start()
+    public TagList()
     {
         tag_list = new List<TagBase>();
 

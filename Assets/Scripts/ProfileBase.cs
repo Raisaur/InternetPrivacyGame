@@ -21,7 +21,6 @@ public class ProfileBase
                 VarRef.Tag p_occ, VarRef.Tag p_fam, VarRef.Tag p_fin, VarRef.Tag p_srch)
     {
         tag_array = new VarRef.Tag[nr_of_tags];
-        tags = new TagList();
 
         tag_array[0] = p_gen; tag_array[1] = p_age;
         tag_array[2] = p_loc; tag_array[3] = p_occ;
@@ -30,6 +29,7 @@ public class ProfileBase
 
         points_ref = new Dictionary<VarRef.Topic, int>();
         tag_bases = new TagBase[nr_of_tags];
+        tags = new TagList();
 
         points_ref.Add(VarRef.Topic.TravelCruise, 0);
         points_ref.Add(VarRef.Topic.TravelCharter, 0);
@@ -55,11 +55,10 @@ public class ProfileBase
         points_ref.Add(VarRef.Topic.ClothesMen, 0);
         points_ref.Add(VarRef.Topic.ClothesCostume, 0);
 
-        tags = GameObject.FindWithTag("GameController").GetComponent<TagList>();
         upgrade_level = GameObject.FindWithTag("GameController").GetComponent<GameManager>().upgrade_level;
 
         for (int i = 0; i < (int)VarRef.Tag.blank; i++){
-            for (int j = 0; i < nr_of_tags; j++)
+            for (int j = 0; j < nr_of_tags; j++)
             {
                 //If the tag currently investigated exists on this profile
                 if (i == (int)tag_array[j])

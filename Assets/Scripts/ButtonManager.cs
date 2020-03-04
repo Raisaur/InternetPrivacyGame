@@ -97,10 +97,10 @@ public class ButtonManager : MonoBehaviour
 
     void ToggleButtons(bool onoff, Button[] buttons)
     {
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            buttons[i].gameObject.SetActive(onoff);
-        }
+        //for (int i = 0; i < buttons.Length; i++)
+        //{
+        //    buttons[i].gameObject.SetActive(onoff);
+        //}
     }
 
     //Travel buttons

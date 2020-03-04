@@ -21,6 +21,8 @@ public class ProfileManager : MonoBehaviour
 
     void Start()
     {
+        profiles = new List<ProfileBase>();
+
         for (int i = 0; i < 120; i++)
         {
             //Order: gender, age, location, occupation, family, financial, searched
