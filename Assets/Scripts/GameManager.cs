@@ -22,9 +22,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int points_multiplier;
 
+    SoundManager sm;
+
     // Start is called before the first frame update
     void Start()
     {
+        sm = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+
         Vector2Int pointer_offset = new Vector2Int(12, 3);
         Cursor.SetCursor(cursor_image, pointer_offset, CursorMode.ForceSoftware);
 
@@ -38,7 +42,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+            sm.PlayClickSound();
     }
 
     public void GiveAd(VarRef.Topic ad_topic)
