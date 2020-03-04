@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
         current_profile = profile_list[0];
         current_profile_index = 0;
+        gameObject.GetComponent<ProfileManager>().DisplayProfile(current_profile);
     }
 
     // Update is called once per frame

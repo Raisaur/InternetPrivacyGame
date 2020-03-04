@@ -127,7 +127,7 @@ public class ButtonManager : MonoBehaviour
         {
             if (upgrade_level < upgrade_buttons.Length)
             {
-                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+               // gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;
@@ -145,7 +145,7 @@ public class ButtonManager : MonoBehaviour
         {
             if (upgrade_level < upgrade_buttons.Length)
             {
-                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                //gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
                 upgrade_level++;
