@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProfileBase : MonoBehaviour
+public class ProfileBase 
 {
     public const int nr_of_tags = 7;
     List<TagBase> profile_tags;
 
     [HideInInspector]
     //Order: gender, age, location, occupation, family, financial, searched
-    public VarRef.Tag[] tag_array = new VarRef.Tag[nr_of_tags];
-    TagBase[] tag_bases = new TagBase[nr_of_tags];
+    public VarRef.Tag[] tag_array;
+    TagBase[] tag_bases;
 
     [HideInInspector]
     public Dictionary<VarRef.Topic, int> points_ref;
@@ -20,14 +20,17 @@ public class ProfileBase : MonoBehaviour
     public ProfileBase(VarRef.Tag p_gen, VarRef.Tag p_age, VarRef.Tag p_loc,
                 VarRef.Tag p_occ, VarRef.Tag p_fam, VarRef.Tag p_fin, VarRef.Tag p_srch)
     {
-        tag_array[0] = p_gen; tag_array[1] = p_gen;
-        tag_array[2] = p_gen; tag_array[3] = p_gen;
-        tag_array[4] = p_gen; tag_array[5] = p_gen;
-        tag_array[6] = p_gen;
-    }
+        tag_array = new VarRef.Tag[nr_of_tags];
+        tags = new TagList();
 
-    void Start()
-    {
+        tag_array[0] = p_gen; tag_array[1] = p_age;
+        tag_array[2] = p_loc; tag_array[3] = p_occ;
+        tag_array[4] = p_fam; tag_array[5] = p_fin;
+        tag_array[6] = p_srch;
+
+        points_ref = new Dictionary<VarRef.Topic, int>();
+        tag_bases = new TagBase[nr_of_tags];
+
         points_ref.Add(VarRef.Topic.TravelCruise, 0);
         points_ref.Add(VarRef.Topic.TravelCharter, 0);
         points_ref.Add(VarRef.Topic.TravelBudget, 0);
@@ -85,12 +88,6 @@ public class ProfileBase : MonoBehaviour
                 points_ref[tag_bases[i].tier3[l]] += 1;
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public int GetNrOfTags()

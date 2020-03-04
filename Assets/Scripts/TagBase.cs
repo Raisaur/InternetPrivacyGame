@@ -27,6 +27,7 @@ public class TagList : MonoBehaviour
 
     void Start()
     {
+        tag_list = new List<TagBase>();
 
         for (int i = 0; i < (int)VarRef.Tag.blank; i++)
         {
