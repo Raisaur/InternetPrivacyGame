@@ -82,6 +82,13 @@ public class ButtonManager : MonoBehaviour
 
         sm = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
 
+        btn_travel.onClick.AddListener(TravelClick);
+        btn_electronics.onClick.AddListener(ElectronicsClick);
+        btn_sports.onClick.AddListener(SportsClick);
+        btn_food.onClick.AddListener(FoodClick);
+        btn_cars.onClick.AddListener(CarsClick);
+        btn_clothes.onClick.AddListener(ClothesClick);
+
         btn_travel_cruise.onClick.AddListener(TravelCruiseClick);
         btn_travel_charter.onClick.AddListener(TravelCharterClick);
         btn_travel_budget.onClick.AddListener(TravelBudgetClick);
@@ -120,10 +127,10 @@ public class ButtonManager : MonoBehaviour
 
     void ToggleButtons(bool onoff, Button[] buttons)
     {
-        //for (int i = 0; i < buttons.Length; i++)
-        //{
-        //    buttons[i].gameObject.SetActive(onoff);
-        //}
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].gameObject.SetActive(onoff);
+        }
     }
 
     //Upgrade buttons
@@ -134,6 +141,7 @@ public class ButtonManager : MonoBehaviour
             if (upgrade_level < upgrade_buttons.Length)
             {
                 // gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                sm.PlayUpgradeSound();
                 data_block_1.gameObject.SetActive(false);
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
@@ -154,6 +162,7 @@ public class ButtonManager : MonoBehaviour
             if (upgrade_level < upgrade_buttons.Length)
             {
                 //gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+                sm.PlayUpgradeSound();
                 data_block_2.gameObject.SetActive(false);
                 upgrade_buttons[upgrade_level].gameObject.SetActive(false);
 
@@ -167,6 +176,12 @@ public class ButtonManager : MonoBehaviour
     //Travel buttons
     void TravelClick()
     {
+        ToggleButtons(false, electronics_buttons);
+        ToggleButtons(false, sports_buttons);
+        ToggleButtons(false, food_buttons);
+        ToggleButtons(false, cars_buttons);
+        ToggleButtons(false, clothes_buttons);
+
         if (travel_buttons[0].IsActive())
             ToggleButtons(false, travel_buttons);
 
@@ -195,6 +210,12 @@ public class ButtonManager : MonoBehaviour
     //Electronics buttons
     void ElectronicsClick()
     {
+        ToggleButtons(false, travel_buttons);
+        ToggleButtons(false, sports_buttons);
+        ToggleButtons(false, food_buttons);
+        ToggleButtons(false, cars_buttons);
+        ToggleButtons(false, clothes_buttons);
+
         if (electronics_buttons[0].IsActive())
             ToggleButtons(false, electronics_buttons);
 
@@ -223,6 +244,12 @@ public class ButtonManager : MonoBehaviour
     //Sports buttons
     void SportsClick()
     {
+        ToggleButtons(false, travel_buttons);
+        ToggleButtons(false, electronics_buttons);
+        ToggleButtons(false, food_buttons);
+        ToggleButtons(false, cars_buttons);
+        ToggleButtons(false, clothes_buttons);
+
         if (sports_buttons[0].IsActive())
             ToggleButtons(false, sports_buttons);
 
@@ -251,6 +278,12 @@ public class ButtonManager : MonoBehaviour
     //Food buttons
     void FoodClick()
     {
+        ToggleButtons(false, travel_buttons);
+        ToggleButtons(false, electronics_buttons);
+        ToggleButtons(false, sports_buttons);
+        ToggleButtons(false, cars_buttons);
+        ToggleButtons(false, clothes_buttons);
+
         if (food_buttons[0].IsActive())
             ToggleButtons(false, food_buttons);
 
@@ -278,6 +311,12 @@ public class ButtonManager : MonoBehaviour
     //Cars buttons
     void CarsClick()
     {
+        ToggleButtons(false, travel_buttons);
+        ToggleButtons(false, electronics_buttons);
+        ToggleButtons(false, sports_buttons);
+        ToggleButtons(false, food_buttons);
+        ToggleButtons(false, clothes_buttons);
+
         if (cars_buttons[0].IsActive())
             ToggleButtons(false, cars_buttons);
 
@@ -305,6 +344,12 @@ public class ButtonManager : MonoBehaviour
     //Clothes buttons
     void ClothesClick()
     {
+        ToggleButtons(false, travel_buttons);
+        ToggleButtons(false, electronics_buttons);
+        ToggleButtons(false, sports_buttons);
+        ToggleButtons(false, food_buttons);
+        ToggleButtons(false, cars_buttons);
+
         if (clothes_buttons[0].IsActive())
             ToggleButtons(false, clothes_buttons);
 

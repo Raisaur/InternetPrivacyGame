@@ -65,6 +65,16 @@ public class GameManager : MonoBehaviour
         }
 
         int bonus = (awarded_points*awarded_points) * points_multiplier;
+
+        if (bonus > 500)
+            sm.PlayLotsOfMoneySound();
+
+        else if (bonus <= 0)
+            sm.PlayNoMoneySound();
+
+        else
+            sm.PlayLittleMoneySound();
+
         currency += bonus;
         currency_text.text = currency.ToString();
 
