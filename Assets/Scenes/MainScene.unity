@@ -336,7 +336,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cruise
+  m_Text: Party Cruise
 --- !u!222 &91555380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e0c1f8cb95224849847386da5521c80, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1413,7 +1413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Parts
+  m_Text: Car Parts
 --- !u!222 &210199953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3344,18 +3344,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5024009ae137bd144877aebf1cd2542e, type: 3}
-    m_FontSize: 7
+    m_FontSize: 6
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gourmet
+  m_Text: Gourmet Cuisine
 --- !u!222 &778990699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5776,7 +5776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1191124929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5972,7 +5972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Games
+  m_Text: Digital Games
 --- !u!222 &1249125623
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6126,7 +6126,7 @@ MonoBehaviour:
   user_number: {fileID: 134912511}
   image_assets:
   - {fileID: 21300000, guid: 696adbf25a53e0b4392d2001f4e8eb76, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: a4e82ece7faac654b97d43cf054007df, type: 3}
   - {fileID: 21300000, guid: 099c1b1c6fbe5bd43909e6e755aefe34, type: 3}
   - {fileID: 21300000, guid: 485cf09274d3560468144b4feb9d0421, type: 3}
   - {fileID: 21300000, guid: 1fbc120df845e044abc8f92e983d126a, type: 3}
@@ -6985,7 +6985,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Take Away
+  m_Text: Take-Away
 --- !u!222 &1419714679
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7217,7 +7217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Phone
+  m_Text: Phones
 --- !u!222 &1489066889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7440,7 +7440,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Charter
+  m_Text: Charter Trip
 --- !u!222 &1522654608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7543,7 +7543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1573158477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7886,7 +7886,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Highend
+  m_Text: High-end Cars
 --- !u!222 &1598683530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7963,7 +7963,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Budget
+  m_Text: Budget Travel
 --- !u!222 &1613381873
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8040,7 +8040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Budget
+  m_Text: Budget Cars
 --- !u!222 &1617227699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8193,7 +8193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Caf\xE9"
+  m_Text: "Caf\xE9s"
 --- !u!222 &1688742474
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8287,7 +8287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1733097068
 RectTransform:
   m_ObjectHideFlags: 0
