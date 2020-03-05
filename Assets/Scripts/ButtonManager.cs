@@ -33,6 +33,8 @@ public class ButtonManager : MonoBehaviour
     Button btn_upgrade1, btn_upgrade_2;
     [SerializeField]
     Image data_block_1, data_block_2;
+    [SerializeField]
+    Button exit_button;
 
     GameManager gm;
     SoundManager sm;
@@ -116,6 +118,8 @@ public class ButtonManager : MonoBehaviour
         btn_upgrade1.onClick.AddListener(Upgrade1Click);
         btn_upgrade_2.onClick.AddListener(Upgrade2Click);
 
+        exit_button.onClick.AddListener(ExitClick);
+
         gm = GetComponent<GameManager>();
     }
 
@@ -131,6 +135,11 @@ public class ButtonManager : MonoBehaviour
         {
             buttons[i].gameObject.SetActive(onoff);
         }
+    }
+
+    void ExitClick()
+    {
+        Application.Quit();
     }
 
     //Upgrade buttons
