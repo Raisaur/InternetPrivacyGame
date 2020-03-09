@@ -44,7 +44,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     GameObject exit_box;
 
-    bool promoted = false;
+    bool promotion_ready = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +58,8 @@ public class ButtonManager : MonoBehaviour
 
         upgrade_buttons = new Button[2];
         upgrade_level = 0;
+        confirmation_box.gameObject.SetActive(false);
+        exit_box.gameObject.SetActive(false);
 
         // add buttons to respective arrays
         { 
@@ -132,10 +134,12 @@ public class ButtonManager : MonoBehaviour
 
     public void PromotionClick()
     {
-        if (promoted)
+        if (promotion_ready)
         {
             exit_box.SetActive(true);
         }
+        if (!promotion_ready)
+            promotion_ready = true;
     }
 
     public void Exit()

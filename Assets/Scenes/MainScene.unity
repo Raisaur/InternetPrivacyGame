@@ -2332,7 +2332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &342710229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2781,7 +2781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &489959772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2801,7 +2801,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -75, y: 15}
-  m_SizeDelta: {x: 150, y: 100}
+  m_SizeDelta: {x: 150, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489959773
 MonoBehaviour:
@@ -2854,12 +2854,9 @@ MonoBehaviour:
   btn_ok: {fileID: 708561998}
   window_text: {fileID: 1847552447}
   button_text: {fileID: 830375461}
-  window_messages:
-  - Rumors have been spreading about a promotion for the highest earner...
-  - You have become eligable for a promotion!
-  button_messages:
-  - Ok
-  - Promote\n 30 000
+  window_message1: Rumors have been spreading about a possi- ble promotion for the
+    highest earner...
+  button_message1: OK
 --- !u!1 &552905350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,7 +4420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &770317554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6711,7 +6708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1031374635
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10750,7 +10747,6 @@ GameObject:
   - component: {fileID: 1842966255}
   - component: {fileID: 1842966258}
   - component: {fileID: 1842966257}
-  - component: {fileID: 1842966256}
   m_Layer: 5
   m_Name: ExitPopUpPrefab
   m_TagString: Untagged
@@ -10780,21 +10776,6 @@ RectTransform:
   m_AnchoredPosition: {x: 35, y: 45}
   m_SizeDelta: {x: 300, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1842966256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1842966254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c88874fc5c3c1743bff9338b7678577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn_yes: {fileID: 185865396}
-  btn_no: {fileID: 0}
-  text: {fileID: 433619105}
 --- !u!114 &1842966257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10865,8 +10846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 130, y: 30}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 130, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1847552447
 MonoBehaviour:
@@ -10899,7 +10880,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You have become eligable for a promotion!
+  m_Text: 'You have become eligable for a promotion!
+
+
+    Do you wish to be promoted?'
 --- !u!222 &1847552448
 CanvasRenderer:
   m_ObjectHideFlags: 0

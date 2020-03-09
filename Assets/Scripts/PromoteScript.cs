@@ -15,9 +15,11 @@ public class PromoteScript : MonoBehaviour
     Text button_text;
 
     [SerializeField]
-    String[] window_messages;
+    String window_message1;
+    String window_message2;
     [SerializeField]
-    String[] button_messages;
+    String button_message1;
+    String button_message2;
 
     Vector3 original_pos;
     Vector3 hide_pos;
@@ -30,10 +32,13 @@ public class PromoteScript : MonoBehaviour
     float journey_length = 0.0f;
     bool show = false;
     bool move = false;
+    bool timing = false;
 
     void Start()
     {
         btn_ok.onClick.AddListener(ClickOk);
+        window_message2 = window_text.text;
+        button_message2 = button_text.text;
         original_pos = gameObject.transform.localPosition;
         journey_length = Vector3.Distance(original_pos, hide_pos);
         hide_pos = new Vector3(original_pos.x + gameObject.GetComponent<RectTransform>().rect.width, original_pos.y, original_pos.z);
@@ -42,10 +47,11 @@ public class PromoteScript : MonoBehaviour
 
     void Update()
     {
-        if (timer > 0)
+        if (timer > 0 && timing)
             timer -= Time.deltaTime;
-        if (timer < 0)
+        if (timer < 0 && timing){
             DisplayHide();
+        }
 
         if (move)
             MoveWindow();
@@ -60,6 +66,7 @@ public class PromoteScript : MonoBehaviour
     {
         start_time = Time.time;
         timer = time_limit;
+        timing = true;
         btn_ok.interactable = true;
         show = true;
         move = true;
@@ -69,21 +76,22 @@ public class PromoteScript : MonoBehaviour
     {
         start_time = Time.time;
         btn_ok.interactable = false;
-        timer = time_limit;
+        timing = false;
         show = false;
         move = true;
+        Debug.Log("Hidden");
     }
 
     public void SetText1()
     {
-        window_text.text = window_messages[0];
-        button_text.text = button_messages[0];
+        window_text.text = window_message1;
+        button_text.text = button_message1;
     }
 
     public void SetText2()
     {
-        window_text.text = window_messages[1];
-        button_text.text = button_messages[1];
+        window_text.text = window_message2;
+        button_text.text = button_message2;
     }
 
     void MoveWindow()
