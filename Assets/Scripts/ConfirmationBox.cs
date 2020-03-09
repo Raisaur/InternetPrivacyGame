@@ -29,8 +29,8 @@ public class ConfirmationBox : MonoBehaviour
     {
         btn_yes.onClick.AddListener(ClickYes);
         btn_no.onClick.AddListener(ClickNo);
-        original_message = text.text;
-        gameObject.SetActive(false);
+        original_message = "Are you sure?";
+        //gameObject.SetActive(false);
     }
 
     public void SetAction(Action use_function) { function = use_function; }

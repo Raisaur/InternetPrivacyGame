@@ -60,6 +60,7 @@ public class PromoteScript : MonoBehaviour
     {
         start_time = Time.time;
         timer = time_limit;
+        btn_ok.interactable = true;
         show = true;
         move = true;
     }
@@ -67,6 +68,7 @@ public class PromoteScript : MonoBehaviour
     void DisplayHide()
     {
         start_time = Time.time;
+        btn_ok.interactable = false;
         timer = time_limit;
         show = false;
         move = true;

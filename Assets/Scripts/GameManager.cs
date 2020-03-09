@@ -17,9 +17,6 @@ public class GameManager : MonoBehaviour
     int[] upgrade_costs;
     int upgrade_level;
 
-    [SerializeField]
-    GameObject promotion_object;
-
     public List<ProfileBase> profile_list;
     ProfileBase current_profile;
     int current_profile_index;
@@ -28,7 +25,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int points_multiplier;
 
+    bool once = false;
+
     SoundManager sm;
+
+    public PromoteScript promote_box;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,17 @@ public class GameManager : MonoBehaviour
             sm.PlayLittleMoneySound();
 
         currency += bonus;
+
+        if (!once)
+        {
+            if (currency > upgrade_costs[upgrade_costs.Length - 1])
+            {
+                once = true;
+                promote_box.SetText2();
+                promote_box.DisplayShow();
+            }
+        }
+
         currency_text.text = currency.ToString();
 
         currency_add_text.text = "+" + bonus;
@@ -114,13 +126,5 @@ public class GameManager : MonoBehaviour
     public void SetUpgradeLevel(int upgradeLevel)
     {
         upgrade_level = upgradeLevel;
-    }
-
-    public IEnumerator Whisper_Promotion()
-    {
-        yield return new WaitForSeconds(20);
-        promotion_object.SetActive(true);
-        yield return new WaitForSeconds(30);
-        promotion_object.SetActive(false);
     }
 }
