@@ -2322,7 +2322,7 @@ GameObject:
   - component: {fileID: 489475258}
   - component: {fileID: 489475261}
   m_Layer: 5
-  m_Name: sub_btn_hike
+  m_Name: sub_btn_gymnastics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3679,7 +3679,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hiking
+  m_Text: Gymnastics
 --- !u!222 &691667884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5947,7 +5947,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20 000
+  m_Text: 15 000
 --- !u!222 &972856842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6024,7 +6024,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Swimwear
+  m_Text: Golf
 --- !u!222 &1015767326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6047,7 +6047,7 @@ GameObject:
   - component: {fileID: 1033001729}
   - component: {fileID: 1033001732}
   m_Layer: 5
-  m_Name: sub_btn_swimwear
+  m_Name: sub_btn_golf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   cursor_image: {fileID: 2800000, guid: 124a4518b5c19804a9bbc845d69894f4, type: 3}
   currency_text: {fileID: 1969002913}
   currency_add_text: {fileID: 1868193122}
-  upgrade_costs: 88130000204e0000a0860100
+  upgrade_costs: 88130000983a000030750000
   points_multiplier: 20
 --- !u!4 &1258512907
 Transform:
@@ -7052,8 +7052,8 @@ MonoBehaviour:
   btn_electronics_games: {fileID: 1191124930}
   btn_electronics_house: {fileID: 1573158478}
   btn_sports_football: {fileID: 1590985545}
-  btn_sports_golf: {fileID: 0}
-  btn_sports_gymnastics: {fileID: 0}
+  btn_sports_golf: {fileID: 1033001729}
+  btn_sports_gymnastics: {fileID: 489475258}
   btn_food_quick: {fileID: 2028852082}
   btn_food_gourmet: {fileID: 248731615}
   btn_food_cafe: {fileID: 790344794}
