@@ -59,6 +59,7 @@ public class PromoteScript : MonoBehaviour
     public void DisplayShow()
     {
         start_time = Time.time;
+        timer = time_limit;
         show = true;
         move = true;
     }
@@ -66,6 +67,7 @@ public class PromoteScript : MonoBehaviour
     void DisplayHide()
     {
         start_time = Time.time;
+        timer = time_limit;
         show = false;
         move = true;
     }
