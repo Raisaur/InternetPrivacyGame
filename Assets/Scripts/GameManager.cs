@@ -17,9 +17,6 @@ public class GameManager : MonoBehaviour
     int[] upgrade_costs;
     int upgrade_level;
 
-    [SerializeField]
-    GameObject promotion_object;
-
     public List<ProfileBase> profile_list;
     ProfileBase current_profile;
     int current_profile_index;
@@ -114,13 +111,5 @@ public class GameManager : MonoBehaviour
     public void SetUpgradeLevel(int upgradeLevel)
     {
         upgrade_level = upgradeLevel;
-    }
-
-    public IEnumerator Whisper_Promotion()
-    {
-        yield return new WaitForSeconds(20);
-        promotion_object.SetActive(true);
-        yield return new WaitForSeconds(30);
-        promotion_object.SetActive(false);
     }
 }
