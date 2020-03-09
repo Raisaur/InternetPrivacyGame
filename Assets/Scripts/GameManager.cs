@@ -66,14 +66,14 @@ public class GameManager : MonoBehaviour
         float global_rand = Random.Range(0.95f, 1.05f);
         float upgrade_bonus = 1.0f;
         if (upgrade_level == 1)
-            upgrade_bonus = 1.2f;
-        else if (upgrade_level == 2)
             upgrade_bonus = 1.4f;
+        else if (upgrade_level == 2)
+            upgrade_bonus = 1.7f;
 
         int bonus = (int)((((awarded_points*awarded_points) * points_multiplier) * upgrade_bonus) * global_rand);
+        if (bonus < 200) bonus = 0;
 
-
-        if (bonus > 500)
+        if (bonus > 700)
             sm.PlayLotsOfMoneySound();
 
         else if (bonus <= 0)
@@ -109,6 +109,9 @@ public class GameManager : MonoBehaviour
 
     public int GetUpgradeCost(int upgradeNumber) { return upgrade_costs[upgradeNumber]; }
 
-    public void SetUpgradeLevel(int upgradeLevel) { upgrade_level = upgradeLevel; }
+    public void SetUpgradeLevel(int upgradeLevel)
+    {
+        upgrade_level = upgradeLevel;
+    }
 
 }

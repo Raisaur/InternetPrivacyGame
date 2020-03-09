@@ -15,7 +15,9 @@ public class BtnTooltipToggle : MonoBehaviour
 
     public void ToggleOn()
     {
-        tooltip.gameObject.SetActive(true);
+        Button parent = gameObject.GetComponent<Button>();
+        if (parent.interactable == true)
+            tooltip.gameObject.SetActive(true);
     }
 
     public void ToggleOff()

@@ -39,8 +39,8 @@ public class ProfileBase
         points_ref.Add(VarRef.Topic.ElecGames, 0);
 
         points_ref.Add(VarRef.Topic.SportsFootball, 0);
-        points_ref.Add(VarRef.Topic.SportsSwimwear, 0);
-        points_ref.Add(VarRef.Topic.SportsHike, 0);
+        points_ref.Add(VarRef.Topic.SportsGolf, 0);
+        points_ref.Add(VarRef.Topic.SportsGymnastics, 0);
 
         points_ref.Add(VarRef.Topic.FoodQuick , 0);
         points_ref.Add(VarRef.Topic.FoodGourmet, 0);

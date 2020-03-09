@@ -59,8 +59,8 @@ public class VarRef : MonoBehaviour
         ElecHouse,          //5
 
         SportsFootball,     //6
-        SportsSwimwear,     //7
-        SportsHike,         //8
+        SportsGolf,     //7
+        SportsGymnastics,         //8
 
         FoodQuick,          //9
         FoodGourmet,        //10
