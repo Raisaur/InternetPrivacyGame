@@ -17,7 +17,11 @@ public class ConfirmationBox : MonoBehaviour
     Button btn_yes, btn_no;
     [SerializeField]
     GameObject Panel;
+    [SerializeField]
+    Text text;
 
+    String message;
+    String original_message;
     Action function;
 
     ConfirmationResults result = ConfirmationResults.ResNull;
@@ -27,24 +31,22 @@ public class ConfirmationBox : MonoBehaviour
     {
         btn_yes.onClick.AddListener(ClickYes);
         btn_no.onClick.AddListener(ClickNo);
+        original_message = text.text;
     }
 
-    public void SetAction(Action use_function)
-    {
-        function = use_function;
-    }
+    public void SetAction(Action use_function) { function = use_function; }
+
+    public void SetMessage(string m) { message = m; }
 
     public void ShowConfirmationBox()
     {
         gameObject.SetActive(true);
+        text.text = original_message;
         result = ConfirmationResults.ResNull;
         function = null;
     }
 
-    public void HideConfirmationBox()
-    {
-        gameObject.SetActive(false);
-    }
+    public void HideConfirmationBox() { gameObject.SetActive(false); }
 
     public ConfirmationResults ReturnResult() { return result; }
 
