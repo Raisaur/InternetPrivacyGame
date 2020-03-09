@@ -3008,6 +3008,7 @@ GameObject:
   - component: {fileID: 598902749}
   - component: {fileID: 598902748}
   - component: {fileID: 598902747}
+  - component: {fileID: 598902750}
   m_Layer: 5
   m_Name: BtnYes
   m_TagString: Untagged
@@ -3114,6 +3115,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598902745}
   m_CullTransparentMesh: 0
+--- !u!114 &598902750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598902745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 196600107}
+          m_MethodName: PlayHoverButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
 --- !u!1 &634297838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4008,6 +4037,7 @@ MonoBehaviour:
   btn_yes: {fileID: 598902747}
   btn_no: {fileID: 1778610381}
   Panel: {fileID: 342710228}
+  text: {fileID: 796947954}
 --- !u!1 &778990696
 GameObject:
   m_ObjectHideFlags: 0
@@ -9800,6 +9830,7 @@ GameObject:
   - component: {fileID: 1778610383}
   - component: {fileID: 1778610382}
   - component: {fileID: 1778610381}
+  - component: {fileID: 1778610384}
   m_Layer: 5
   m_Name: BtnNo
   m_TagString: Untagged
@@ -9906,6 +9937,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778610379}
   m_CullTransparentMesh: 0
+--- !u!114 &1778610384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778610379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 196600107}
+          m_MethodName: PlayHoverButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1792821150
 GameObject:
   m_ObjectHideFlags: 0
