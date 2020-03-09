@@ -41,6 +41,11 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     ConfirmationBox confirmation_box;
 
+    [SerializeField]
+    GameObject exit_box;
+
+    bool promoted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -125,10 +130,17 @@ public class ButtonManager : MonoBehaviour
         gm = GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PromotionClick()
     {
+        if (promoted)
+        {
+            exit_box.SetActive(true);
+        }
+    }
 
+    public void Exit()
+    {
+        confirmation_box.SetAction(Application.Quit);
     }
 
     void ToggleButtons(bool onoff, Button[] buttons)
