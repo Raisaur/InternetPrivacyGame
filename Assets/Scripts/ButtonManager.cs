@@ -38,6 +38,8 @@ public class ButtonManager : MonoBehaviour
 
     GameManager gm;
     SoundManager sm;
+    [SerializeField]
+    ConfirmationBox confirmation_box;
 
     // Start is called before the first frame update
     void Start()
@@ -137,9 +139,20 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
+    IEnumerator ShowConfirmationBox()
+    {
+        confirmation_box.ShowConfirmationBox();
+
+        while (confirmation_box.ReturnResult() == ConfirmationResults.ResNull)
+            yield return null;
+
+        confirmation_box.HideConfirmationBox();
+    }
+
     void ExitClick()
     {
-        Application.Quit();
+        StartCoroutine(ShowConfirmationBox());
+        confirmation_box.SetAction(Application.Quit);
     }
 
     //Upgrade buttons
@@ -149,16 +162,23 @@ public class ButtonManager : MonoBehaviour
         {
             if (upgrade_level < upgrade_buttons.Length)
             {
-                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
-                sm.PlayUpgradeSound();
-                data_block_1.gameObject.SetActive(false);
-                upgrade_buttons[upgrade_level].gameObject.SetActive(false);
-
-                upgrade_level++;
-                gm.SetUpgradeLevel(upgrade_level);
-                upgrade_1_done = true;
+                StartCoroutine(ShowConfirmationBox());
+                confirmation_box.SetAction(Upgrade1);
             }
         }
+    }
+
+    void Upgrade1()
+    {
+        gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+        sm.PlayUpgradeSound();
+        data_block_1.gameObject.SetActive(false);
+        upgrade_buttons[upgrade_level].gameObject.SetActive(false);
+
+        upgrade_level++;
+        gm.SetUpgradeLevel(upgrade_level);
+        btn_upgrade_2.interactable = true;
+        upgrade_1_done = true;
     }
 
     void Upgrade2Click()
@@ -170,16 +190,22 @@ public class ButtonManager : MonoBehaviour
         {
             if (upgrade_level < upgrade_buttons.Length)
             {
-                gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
-                sm.PlayUpgradeSound();
-                data_block_2.gameObject.SetActive(false);
-                upgrade_buttons[upgrade_level].gameObject.SetActive(false);
-
-                upgrade_level++;
-                gm.SetUpgradeLevel(upgrade_level);
-                upgrade_1_done = true;
+                StartCoroutine(ShowConfirmationBox());
+                confirmation_box.SetAction(Upgrade2);
             }
         }
+    }
+
+    void Upgrade2()
+    {
+        gm.SubtractCurrency(gm.GetUpgradeCost(upgrade_level));
+        sm.PlayUpgradeSound();
+        data_block_2.gameObject.SetActive(false);
+        upgrade_buttons[upgrade_level].gameObject.SetActive(false);
+
+        upgrade_level++;
+        gm.SetUpgradeLevel(upgrade_level);
+        upgrade_1_done = true;
     }
 
     //Travel buttons
