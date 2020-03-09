@@ -205,7 +205,7 @@ public class ButtonManager : MonoBehaviour
 
         upgrade_level++;
         gm.SetUpgradeLevel(upgrade_level);
-        upgrade_1_done = true;
+        StartCoroutine(gm.Whisper_Promotion());
     }
 
     //Travel buttons

@@ -16,8 +16,6 @@ public class ConfirmationBox : MonoBehaviour
     [SerializeField]
     Button btn_yes, btn_no;
     [SerializeField]
-    GameObject Panel;
-    [SerializeField]
     Text text;
 
     String message;
@@ -32,6 +30,7 @@ public class ConfirmationBox : MonoBehaviour
         btn_yes.onClick.AddListener(ClickYes);
         btn_no.onClick.AddListener(ClickNo);
         original_message = text.text;
+        gameObject.SetActive(false);
     }
 
     public void SetAction(Action use_function) { function = use_function; }

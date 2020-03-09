@@ -2546,7 +2546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &489959772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4247,7 +4247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_yes: {fileID: 598902747}
   btn_no: {fileID: 1778610381}
-  Panel: {fileID: 342710228}
   text: {fileID: 796947954}
 --- !u!1 &778990696
 GameObject:
@@ -7423,6 +7422,7 @@ MonoBehaviour:
   currency_text: {fileID: 1969002913}
   currency_add_text: {fileID: 1868193122}
   upgrade_costs: 88130000983a000030750000
+  promotion_object: {fileID: 489959771}
   points_multiplier: 20
 --- !u!4 &1258512907
 Transform:
