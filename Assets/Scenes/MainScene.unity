@@ -2619,8 +2619,12 @@ MonoBehaviour:
   btn_ok: {fileID: 708561998}
   window_text: {fileID: 1847552447}
   button_text: {fileID: 830375461}
-  window_messages: []
-  button_messages: []
+  window_messages:
+  - Rumors have been spreading about a promotion for the highest earner...
+  - You have become eligable for a promotion!
+  button_messages:
+  - Ok
+  - Promote\n 30 000
 --- !u!1 &552905350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7422,8 +7426,8 @@ MonoBehaviour:
   currency_text: {fileID: 1969002913}
   currency_add_text: {fileID: 1868193122}
   upgrade_costs: 88130000983a000030750000
-  promotion_object: {fileID: 489959771}
   points_multiplier: 20
+  promote_box: {fileID: 489959775}
 --- !u!4 &1258512907
 Transform:
   m_ObjectHideFlags: 0

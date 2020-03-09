@@ -205,6 +205,8 @@ public class ButtonManager : MonoBehaviour
 
         upgrade_level++;
         gm.SetUpgradeLevel(upgrade_level);
+        gm.promote_box.SetText1();
+        gm.promote_box.DisplayShow();
     }
 
     //Travel buttons
