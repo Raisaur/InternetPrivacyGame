@@ -3859,7 +3859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &770317554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7052,8 +7052,8 @@ MonoBehaviour:
   btn_electronics_games: {fileID: 1191124930}
   btn_electronics_house: {fileID: 1573158478}
   btn_sports_football: {fileID: 1590985545}
-  btn_sports_swimwear: {fileID: 1033001729}
-  btn_sports_hiking: {fileID: 489475258}
+  btn_sports_golf: {fileID: 0}
+  btn_sports_gymnastics: {fileID: 0}
   btn_food_quick: {fileID: 2028852082}
   btn_food_gourmet: {fileID: 248731615}
   btn_food_cafe: {fileID: 790344794}

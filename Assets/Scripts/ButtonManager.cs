@@ -24,7 +24,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     Button btn_travel_cruise, btn_travel_charter, btn_travel_budget, 
            btn_electronics_phone, btn_electronics_games, btn_electronics_house,
-           btn_sports_football, btn_sports_swimwear, btn_sports_hiking,
+           btn_sports_football, btn_sports_golf, btn_sports_gymnastics,
            btn_food_quick, btn_food_gourmet, btn_food_cafe,
            btn_cars_budget, btn_cars_highend, btn_cars_parts,
            btn_clothes_women, btn_clothes_men, btn_clothes_costume;
@@ -63,8 +63,8 @@ public class ButtonManager : MonoBehaviour
             electronics_buttons[2] = btn_electronics_house;
 
             sports_buttons[0] = btn_sports_football;
-            sports_buttons[1] = btn_sports_swimwear;
-            sports_buttons[2] = btn_sports_hiking;
+            sports_buttons[1] = btn_sports_golf;
+            sports_buttons[2] = btn_sports_gymnastics;
 
             food_buttons[0] = btn_food_quick;
             food_buttons[1] = btn_food_gourmet;
@@ -100,8 +100,8 @@ public class ButtonManager : MonoBehaviour
         btn_electronics_house.onClick.AddListener(ElectronicHouseClick);
 
         btn_sports_football.onClick.AddListener(SportsFootballClick);
-        btn_sports_swimwear.onClick.AddListener(SportsSwimwearClick);
-        btn_sports_hiking.onClick.AddListener(SportsHikeClick);
+        btn_sports_golf.onClick.AddListener(SportsGolfClick);
+        btn_sports_gymnastics.onClick.AddListener(SportsGymnasticsClick);
 
         btn_food_quick.onClick.AddListener(FoodQuickClick);
         btn_food_gourmet.onClick.AddListener(FoodGourmetClick);
@@ -272,15 +272,15 @@ public class ButtonManager : MonoBehaviour
         ToggleButtons(false, sports_buttons);
     }
 
-    void SportsSwimwearClick()
+    void SportsGolfClick()
     {
-        gm.GiveAd(VarRef.Topic.SportsSwimwear);
+        gm.GiveAd(VarRef.Topic.SportsGolf);
         ToggleButtons(false, sports_buttons);
     }
 
-    void SportsHikeClick()
+    void SportsGymnasticsClick()
     {
-        gm.GiveAd(VarRef.Topic.SportsHike);
+        gm.GiveAd(VarRef.Topic.SportsGymnastics);
         ToggleButtons(false, sports_buttons);
     }
 
