@@ -158,7 +158,7 @@ public class ProfileManager : MonoBehaviour
             else if (profile_tags[6] == VarRef.Tag.SearchParty)
                 text_fields[6].text = "Parties and festivities";
             else if (profile_tags[6] == VarRef.Tag.SearchOutdoor)
-                text_fields[6].text = "Ourdoor activities";
+                text_fields[6].text = "Outdoor activities";
             else if (profile_tags[6] == VarRef.Tag.SearchEatOut)
                 text_fields[6].text = "Restaurants and eating out";
             else if (profile_tags[6] == VarRef.Tag.SearchVacation)
