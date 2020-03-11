@@ -39,7 +39,7 @@ public class ButtonManager : MonoBehaviour
     GameManager gm;
     SoundManager sm;
     [SerializeField]
-    ConfirmationBox confirmation_box;
+    ConfirmationBox confirmation_box, are_you_really_sure_box;
 
     [SerializeField]
     GameObject exit_box;
@@ -169,6 +169,16 @@ public class ButtonManager : MonoBehaviour
         confirmation_box.HideConfirmationBox();
     }
 
+    IEnumerator ShowAreYouSureBox()
+    {
+        are_you_really_sure_box.ShowConfirmationBox();
+
+        while (are_you_really_sure_box.ReturnResult() == ConfirmationResults.ResNull)
+            yield return null;
+
+        are_you_really_sure_box.HideConfirmationBox();
+    }
+
     void ExitClick()
     {
         StartCoroutine(ShowConfirmationBox());
@@ -211,9 +221,15 @@ public class ButtonManager : MonoBehaviour
             if (upgrade_level < upgrade_buttons.Length)
             {
                 StartCoroutine(ShowConfirmationBox());
-                confirmation_box.SetAction(Upgrade2);
+                confirmation_box.SetAction(AreYouSure);
             }
         }
+    }
+
+    void AreYouSure()
+    {
+        StartCoroutine(ShowAreYouSureBox());
+        are_you_really_sure_box.SetAction(Upgrade2);
     }
 
     void Upgrade2()
