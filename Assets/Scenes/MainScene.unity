@@ -883,18 +883,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185865397}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1258512908}
-        m_MethodName: Exit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &185865397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6741,7 +6730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7802,6 +7791,7 @@ MonoBehaviour:
   exit_button: {fileID: 2066061456}
   confirmation_box: {fileID: 770317557}
   exit_box: {fileID: 1842966254}
+  exit_box_button: {fileID: 185865396}
 --- !u!114 &1258512909
 MonoBehaviour:
   m_ObjectHideFlags: 0

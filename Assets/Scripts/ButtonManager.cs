@@ -43,6 +43,8 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField]
     GameObject exit_box;
+    [SerializeField]
+    Button exit_box_button;
 
     bool promotion_ready = false;
 
@@ -128,6 +130,8 @@ public class ButtonManager : MonoBehaviour
         btn_upgrade_2.onClick.AddListener(Upgrade2Click);
 
         exit_button.onClick.AddListener(ExitClick);
+        exit_box_button.onClick.AddListener(Exit);
+        exit_box.SetActive(false);
 
         gm = GetComponent<GameManager>();
     }
@@ -142,9 +146,9 @@ public class ButtonManager : MonoBehaviour
             promotion_ready = true;
     }
 
-    public void Exit()
+    void Exit()
     {
-        confirmation_box.SetAction(Application.Quit);
+        Application.Quit();
     }
 
     void ToggleButtons(bool onoff, Button[] buttons)

@@ -34,6 +34,8 @@ public class PromoteScript : MonoBehaviour
     bool move = false;
     bool timing = false;
 
+    Action button_function;
+
     void Start()
     {
         btn_ok.onClick.AddListener(ClickOk);
@@ -56,9 +58,12 @@ public class PromoteScript : MonoBehaviour
         if (move)
             MoveWindow();
 
-        if (show && transform.localPosition == original_pos)
+        if (show && Vector2.Distance(transform.localPosition, original_pos) <= .2f)
+        {
             move = false;
-        else if (!show && transform.localPosition == hide_pos)
+            btn_ok.interactable = true;
+        }
+        else if (!show && Vector2.Distance(transform.localPosition, hide_pos) <= .2f)
             move = false;
     }
 
@@ -67,7 +72,6 @@ public class PromoteScript : MonoBehaviour
         start_time = Time.time;
         timer = time_limit;
         timing = true;
-        btn_ok.interactable = true;
         show = true;
         move = true;
     }
