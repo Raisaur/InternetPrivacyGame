@@ -42,7 +42,7 @@ public class ButtonManager : MonoBehaviour
     ConfirmationBox confirmation_box, are_you_really_sure_box;
 
     [SerializeField]
-    GameObject exit_box;
+    public GameObject exit_box;
     [SerializeField]
     Button exit_box_button;
 

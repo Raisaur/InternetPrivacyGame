@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     ProfileBase current_profile;
     int current_profile_index;
 
-    int currency = 49000;
+    int currency = 0;
     [SerializeField]
     int points_multiplier;
 
@@ -121,7 +121,13 @@ public class GameManager : MonoBehaviour
     void LoadNextProfile()
     {
         current_profile_index++;
-        current_profile = profile_list[current_profile_index];
+        if (current_profile_index < profile_list.Count)
+        {
+            current_profile = profile_list[current_profile_index];
+        }
+
+        else
+            gameObject.GetComponent<ButtonManager>().exit_box.SetActive(true);
     }
 
     public int GetCurrency() { return currency; }
