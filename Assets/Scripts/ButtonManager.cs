@@ -227,6 +227,7 @@ public class ButtonManager : MonoBehaviour
         gm.SetUpgradeLevel(upgrade_level);
         gm.promote_box.SetText1();
         gm.promote_box.DisplayShow();
+        gm.promote_box.StartTimer();
     }
 
     //Travel buttons

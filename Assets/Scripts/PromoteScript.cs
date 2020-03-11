@@ -70,20 +70,25 @@ public class PromoteScript : MonoBehaviour
     public void DisplayShow()
     {
         start_time = Time.time;
-        timer = time_limit;
-        timing = true;
         show = true;
         move = true;
     }
 
     void DisplayHide()
     {
-        start_time = Time.time;
         btn_ok.interactable = false;
+        start_time = Time.time;
+        timer = 0.0f;
         timing = false;
         show = false;
         move = true;
         Debug.Log("Hidden");
+    }
+
+    public void StartTimer()
+    {
+        timer = time_limit;
+        timing = true;
     }
 
     public void SetText1()
@@ -113,4 +118,8 @@ public class PromoteScript : MonoBehaviour
     {
         DisplayHide();
     }
+
+    public bool IsMoving() { return move; }
+    public bool IsShowing() { return show; }
+
 }

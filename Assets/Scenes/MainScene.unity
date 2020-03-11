@@ -2843,8 +2843,8 @@ MonoBehaviour:
   btn_ok: {fileID: 708561998}
   window_text: {fileID: 1847552447}
   button_text: {fileID: 830375461}
-  window_message1: Rumors have been spreading about a possi- ble promotion for the
-    highest earner...
+  window_message1: Rumors have been spreading about a promotion for anyone who's
+    earned 30k...
   button_message1: OK
 --- !u!1 &552905350
 GameObject:
@@ -6730,7 +6730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}
+  m_Color: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 0.627451}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

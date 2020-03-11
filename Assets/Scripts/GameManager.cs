@@ -21,11 +21,13 @@ public class GameManager : MonoBehaviour
     ProfileBase current_profile;
     int current_profile_index;
 
-    int currency = 0;
+    int currency = 49000;
     [SerializeField]
     int points_multiplier;
 
     bool once = false;
+    bool promo_box_move = false;
+    public bool has_seen_rumors = false;
 
     SoundManager sm;
 
@@ -57,6 +59,15 @@ public class GameManager : MonoBehaviour
             add_timer -= Time.deltaTime;
         if (add_timer < 0)
             currency_add_text.gameObject.SetActive(false);
+
+        if (promo_box_move == true && promote_box.IsMoving() == false) {
+            if (promote_box.IsShowing() == false)
+            {
+                has_seen_rumors = true;
+                Debug.Log("Has seen rumors");
+            }
+        }
+        promo_box_move = promote_box.IsMoving();
     }
 
     public void GiveAd(VarRef.Topic ad_topic)
@@ -87,9 +98,9 @@ public class GameManager : MonoBehaviour
 
         currency += bonus;
 
-        if (!once)
+        if (!once && has_seen_rumors)
         {
-            if (currency > upgrade_costs[upgrade_costs.Length - 1])
+            if (currency > upgrade_costs[upgrade_costs.Length - 1] && upgrade_level == 2)
             {
                 once = true;
                 promote_box.SetText2();
