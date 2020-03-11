@@ -40,7 +40,7 @@ public class ConfirmationBox : MonoBehaviour
     public void ShowConfirmationBox()
     {
         gameObject.SetActive(true);
-        text.text = original_message;
+        //text.text = original_message;
         result = ConfirmationResults.ResNull;
         function = null;
     }
